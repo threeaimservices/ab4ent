@@ -1834,4 +1834,11 @@ body.children-page .page-hero p {
     body.children-page .page-hero p {
         font-size: 1.1rem;
     }
+
+    /* Make navigation buttons more compact on mobile */
+    body.children-page .page-nav-list a {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+        border-radius: 15px;
+    }
 }
