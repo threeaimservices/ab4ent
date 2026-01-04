@@ -56,6 +56,8 @@
     let lastScrollY = 0;
 
     function handleScroll() {
+        if (!header) return;
+
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > 50) {
