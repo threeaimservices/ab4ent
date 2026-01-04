@@ -1838,11 +1838,12 @@ body.children-page .page-hero p {
     /* Make navigation buttons more compact on mobile */
     body.children-page .page-nav-list {
         justify-content: space-between;
+        gap: 0.5rem;
     }
 
     body.children-page .page-nav-list li {
-        flex: 0 0 48%;
-        max-width: 48%;
+        flex: 0 0 calc(50% - 0.25rem);
+        max-width: calc(50% - 0.25rem);
     }
 
     body.children-page .page-nav-list a {
