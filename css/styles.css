@@ -1246,12 +1246,16 @@ button:focus {
 .page-hero h1 {
     color: var(--color-white);
     margin-bottom: var(--spacing-sm);
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .page-hero p {
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .page-hero-children {
@@ -1793,6 +1797,17 @@ body.children-page .page-hero h1 {
 body.children-page .page-hero p {
     font-size: 1.4rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for page hero on all pages */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
 }
 
 /* Responsive adjustments for children's page */
