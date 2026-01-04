@@ -1,5 +1,9 @@
 # Mrs Andrea Burgess - ENT Consultant Website
 
+## 🌐 Live Website
+
+**GitHub Pages URL:** https://threeaimservices.github.io/ab4ent/
+
 ## Overview
 
 A professional, clean website for Mrs Andrea Burgess, a Consultant ENT Surgeon based in Hampshire, UK. The site provides essential information and resources for prospective patients, with separate sections for adults and children.
@@ -47,6 +51,64 @@ The children's page (`children.html`) includes special styling to make it more a
 - **Stack**: Plain HTML5, CSS3, vanilla JavaScript (no frameworks)
 - **Browser Support**: Modern browsers (Chrome, Firefox, Safari, Edge)
 - **No Build Process**: Can be opened directly in a browser or served with any static file server
+- **Hosting**: GitHub Pages with automatic deployment via GitHub Actions
+
+## 🚀 Deployment
+
+### Automatic Deployment (GitHub Pages)
+
+This website is configured for automatic deployment to GitHub Pages:
+
+1. **Push to main branch**: Any push to the `main` branch triggers automatic deployment
+2. **GitHub Actions**: The `.github/workflows/deploy.yml` workflow handles deployment
+3. **Live in minutes**: Changes appear at https://threeaimservices.github.io/ab4ent/ within 1-2 minutes
+
+### Manual Deployment
+
+If needed, you can trigger deployment manually:
+1. Go to the repository on GitHub
+2. Click "Actions" tab
+3. Select "Deploy to GitHub Pages" workflow
+4. Click "Run workflow"
+
+### First-Time Setup (Already Configured)
+
+The repository is already configured for GitHub Pages:
+- ✅ `.nojekyll` file added (disables Jekyll processing)
+- ✅ GitHub Actions workflow created
+- ✅ Configured to deploy from `main` branch
+
+**Note:** After the first push, you may need to enable GitHub Pages in the repository settings:
+1. Go to Settings → Pages
+2. Source should be set to "GitHub Actions"
+3. The site will be available at: https://threeaimservices.github.io/ab4ent/
+
+## 📝 Making Updates
+
+To update the live website:
+
+```bash
+# Make your changes to HTML/CSS/JS files
+git add .
+git commit -m "Description of changes"
+git push origin main
+
+# GitHub Actions will automatically deploy within 1-2 minutes
+```
+
+## 🔧 Local Development
+
+To test the website locally:
+
+```bash
+# Option 1: Simple Python server
+python -m http.server 8000
+
+# Option 2: Node.js http-server (if installed)
+npx http-server
+
+# Then open: http://localhost:8000
+```
 
 ## Contact Information
 
