@@ -1244,6 +1244,9 @@ button:focus {
     background-position: center;
     color: var(--color-white);
     text-align: center;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
 }
 
 .page-hero h1 {
