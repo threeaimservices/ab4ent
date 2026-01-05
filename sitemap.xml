@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Home Page -->
+    <url>
+        <loc>https://ab4ent.com/</loc>
+        <lastmod>2026-01-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Adults ENT Resources Page -->
+    <url>
+        <loc>https://ab4ent.com/adults.html</loc>
+        <lastmod>2026-01-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Children's ENT Resources Page -->
+    <url>
+        <loc>https://ab4ent.com/children.html</loc>
+        <lastmod>2026-01-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- PDF Documents - Adult Resources -->
+    <url>
+        <loc>https://ab4ent.com/docs/hearing-loss-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/tinnitus-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/ear-infections-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/earwax-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/sinusitis-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/nasal-blockage-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/nosebleeds-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/rhinitis-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/voice-problems-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/swallowing-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/snoring-sleep-apnoea-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/neck-lumps-advice.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- PDF Documents - Children's Resources -->
+    <url>
+        <loc>https://ab4ent.com/docs/glue-ear-parents-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/grommets-parents-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/ear-infections-children-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/hearing-children-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/adenoids-parents-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/snoring-children-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/nosebleeds-children-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/tonsillitis-parents-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/tonsillectomy-parents-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://ab4ent.com/docs/tongue-tie-parents-guide.pdf</loc>
+        <lastmod>2026-01-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>
