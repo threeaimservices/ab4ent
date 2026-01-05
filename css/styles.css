@@ -1244,7 +1244,7 @@ button:focus {
     background-position: center;
     color: var(--color-white);
     text-align: center;
-    height: 380px;
+    height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
