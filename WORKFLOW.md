@@ -2,9 +2,35 @@
 
 This guide explains how to make changes to your website safely and efficiently.
 
-## Quick Start
+## Quick Start (Simple Direct Updates)
 
-### Making a Simple Change
+For most updates, work directly on the main branch:
+
+```bash
+# 1. Make sure you're up to date
+git checkout main
+git pull origin main
+
+# 2. Make your changes to HTML/CSS/JS files
+# Edit files as needed...
+
+# 3. Test locally (recommended)
+python -m http.server 8000
+# Visit http://localhost:8000 to test
+
+# 4. Commit your changes
+git add .
+git commit -m "Description of what you changed"
+
+# 5. Push to main - site deploys automatically!
+git push origin main
+
+# Your changes will be live within 1-2 minutes!
+```
+
+## Advanced: Using Feature Branches (Optional)
+
+For major changes or when you want to review before deploying:
 
 ```bash
 # 1. Make sure you're on main and up to date
@@ -17,7 +43,7 @@ git checkout -b update/your-change-description
 # 3. Make your changes to HTML/CSS/JS files
 # Edit files as needed...
 
-# 4. Test locally (optional but recommended)
+# 4. Test locally
 python -m http.server 8000
 # Visit http://localhost:8000 to test
 
@@ -38,9 +64,9 @@ git push -u origin update/your-change-description
 # Your changes will automatically deploy to the live site within 1-2 minutes!
 ```
 
-## Branch Naming Convention
+### Branch Naming Convention
 
-Use descriptive branch names with prefixes:
+If using feature branches, use descriptive names with prefixes:
 
 - `update/` - For content updates (e.g., `update/contact-info`)
 - `feature/` - For new features (e.g., `feature/booking-form`)
@@ -51,9 +77,9 @@ Use descriptive branch names with prefixes:
 
 ### Automatic Deployment
 
-Your website automatically deploys when you merge changes to the `main` branch:
+Your website automatically deploys when you push changes to the `main` branch:
 
-1. **You merge a Pull Request** → GitHub Actions triggers
+1. **You push to main** → GitHub Actions triggers
 2. **Workflow runs** (takes ~1-2 minutes)
 3. **Live site updates** at https://threeaimservices.github.io/ab4ent/
 
@@ -91,38 +117,31 @@ Test on different devices:
 
 ### Updating Text Content
 
-1. Create branch: `git checkout -b update/content-changes`
-2. Edit the HTML file (e.g., `index.html`, `adults.html`, `children.html`)
-3. Commit and push
-4. Create Pull Request
-5. Merge when ready
+1. Edit the HTML file (e.g., `index.html`, `adults.html`, `children.html`)
+2. Test locally if desired
+3. Commit: `git add . && git commit -m "Update page content"`
+4. Push: `git push origin main`
 
 ### Updating Styles
 
-1. Create branch: `git checkout -b design/style-updates`
-2. Edit `css/styles.css`
-3. Test locally to see changes
-4. Commit and push
-5. Create Pull Request
-6. Merge when ready
+1. Edit `css/styles.css`
+2. Test locally to see changes: `python -m http.server 8000`
+3. Commit: `git add . && git commit -m "Update styles"`
+4. Push: `git push origin main`
 
 ### Adding New PDFs
 
-1. Create branch: `git checkout -b update/add-pdf`
-2. Add PDF to `docs/` folder
-3. Update the relevant HTML page to link to it
-4. Commit and push
-5. Create Pull Request
-6. Merge when ready
+1. Add PDF to `docs/` folder
+2. Update the relevant HTML page to link to it
+3. Commit: `git add . && git commit -m "Add new PDF resource"`
+4. Push: `git push origin main`
 
 ### Adding Images
 
-1. Create branch: `git checkout -b update/add-images`
-2. Add images to `images/` folder
-3. Update HTML to reference the image
-4. Commit and push
-5. Create Pull Request
-6. Merge when ready
+1. Add images to `images/` folder
+2. Update HTML to reference the image
+3. Commit: `git add . && git commit -m "Add new images"`
+4. Push: `git push origin main`
 
 ## Emergency Rollback
 
@@ -158,6 +177,16 @@ git push origin main
 ## Current Site Info
 
 - **Live URL**: https://threeaimservices.github.io/ab4ent/
-- **Main Branch**: `main` (protected - always use Pull Requests)
-- **Deployment Time**: 1-2 minutes after merge
+- **Main Branch**: `main` (push directly for simple updates)
+- **Deployment Time**: 1-2 minutes after push to main
 - **Build Tool**: GitHub Actions (see `.github/workflows/deploy.yml`)
+
+## When to Use Feature Branches
+
+Consider using feature branches (the advanced workflow above) when:
+- Making major structural changes
+- Testing experimental features
+- Working on multiple changes simultaneously
+- You want to review changes before they go live
+
+For simple content updates, styles, or adding resources, pushing directly to main is fine!

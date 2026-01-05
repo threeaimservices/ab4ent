@@ -1,38 +1,42 @@
 # Quick Start Guide
 
-## I want to make a quick change right now
+## I want to make a change right now
 
 ```bash
 # 1. Get latest code
 git checkout main
 git pull origin main
 
-# 2. Create a branch
-git checkout -b update/my-change
-
-# 3. Make your edits
+# 2. Make your edits
 # (Edit the files you need to change)
 
-# 4. Save and push
+# 3. Save and push - site updates automatically!
 git add .
 git commit -m "Describe what you changed"
-git push -u origin update/my-change
+git push origin main
 
-# 5. Go to GitHub and create a Pull Request
-# https://github.com/threeaimservices/ab4ent/pulls
-
-# 6. Merge it and your site updates automatically!
+# Done! Your site will be live in 1-2 minutes
 ```
 
 ## I want to test before publishing
 
 ```bash
-# After step 3 above, test locally:
-python -m http.server 8000
+# 1. Get latest code
+git checkout main
+git pull origin main
 
+# 2. Make your edits
+# (Edit the files you need to change)
+
+# 3. Test locally before pushing
+python -m http.server 8000
 # Open browser to: http://localhost:8000
 # Check that everything looks good
-# Then continue with step 4
+
+# 4. Save and push when ready
+git add .
+git commit -m "Describe what you changed"
+git push origin main
 ```
 
 ## Common File Locations
