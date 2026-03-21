@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olly Bray</title>
+    <meta name="description" content="Placeholder website for Olly Bray — coming soon.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =============================================
+     HEADER  —  Edit the site name and nav links
+     ============================================= -->
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="site-title">Olly Bray</a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- =============================================
+     HERO BANNER  —  Edit the headline and tagline
+     ============================================= -->
+<section class="hero">
+    <h1>Hi, I'm Olly Bray</h1>
+    <p>
+        <!-- Replace this sentence with a short description of what you do -->
+        Welcome to my website. This is where you'll find my work, ideas, and how to get in touch.
+    </p>
+    <a href="#contact" class="btn">Get in touch</a>
+</section>
+
+<!-- =============================================
+     ABOUT  —  A short bio and photo
+     ============================================= -->
+<section class="section section--alt" id="about">
+    <div class="section-inner">
+        <h2>About Me</h2>
+        <div class="about-layout">
+
+            <!-- Replace this box with an <img> tag when you have a photo:
+                 <img src="images/olly-bray.jpg" alt="Olly Bray" style="width:200px;border-radius:8px;">
+            -->
+            <div class="about-photo">
+                Your photo<br>goes here
+            </div>
+
+            <div class="about-text">
+                <!-- Edit the paragraphs below with your own bio -->
+                <p>
+                    This is placeholder text for your bio. Replace it with a few sentences about
+                    yourself — who you are, what you do, and what you're passionate about.
+                </p>
+                <p>
+                    You can add a second paragraph here with more detail about your background,
+                    experience, or anything else you'd like visitors to know.
+                </p>
+                <p>
+                    Keep it friendly and in your own voice — a short bio works better than
+                    a long one!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     WORK / SERVICES  —  What you do or offer
+     ============================================= -->
+<section class="section" id="work">
+    <div class="section-inner">
+        <h2>What I Do</h2>
+        <p>
+            <!-- Replace with a sentence or two about your work or services -->
+            Here's an overview of the areas I work in. Edit the cards below to describe
+            your own projects, services, or areas of expertise.
+        </p>
+
+        <div class="card-grid">
+
+            <!-- Card 1 — Edit title and description -->
+            <div class="card">
+                <h3>Area of Work 1</h3>
+                <p>
+                    Describe the first thing you do here. Keep it concise — two or three
+                    sentences is ideal.
+                </p>
+            </div>
+
+            <!-- Card 2 — Edit title and description -->
+            <div class="card">
+                <h3>Area of Work 2</h3>
+                <p>
+                    Describe another area of your work here. What problems do you solve,
+                    or what value do you bring?
+                </p>
+            </div>
+
+            <!-- Card 3 — Edit title and description -->
+            <div class="card">
+                <h3>Area of Work 3</h3>
+                <p>
+                    A third card. You can add more cards by copying this block,
+                    or remove a card if two is enough.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     CONTACT  —  How people can reach you
+     ============================================= -->
+<section class="section section--alt" id="contact">
+    <div class="section-inner">
+        <h2>Get in Touch</h2>
+        <p>
+            <!-- Edit this intro line -->
+            I'd love to hear from you. Reach out via any of the options below.
+        </p>
+
+        <div class="contact-info">
+            <!-- Replace the email address with your own -->
+            <p>Email: <a href="mailto:hello@ollybray.com">hello@ollybray.com</a></p>
+
+            <!-- Uncomment and edit the lines below to add more contact options -->
+            <!-- <p>Phone: <a href="tel:+441234567890">01234 567 890</a></p> -->
+            <!-- <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p> -->
+            <!-- <p>Twitter / X: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a></p> -->
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     FOOTER  —  Edit the copyright line
+     ============================================= -->
+<footer>
+    <p>&copy; <span id="year"></span> Olly Bray. All rights reserved.</p>
+</footer>
+
+<script>
+    // Automatically keeps the copyright year up to date
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
