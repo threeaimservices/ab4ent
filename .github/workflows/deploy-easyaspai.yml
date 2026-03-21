@@ -1,0 +1,49 @@
+name: Deploy easyaspai.com to GitHub Pages
+
+# Runs whenever the easyaspai.com subfolder changes on main,
+# or can be triggered manually from the Actions tab.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'easyaspai.com/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Push to ollybray99/easyaspai.com
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      # Copies just the easyaspai.com/ subfolder and pushes it as the
+      # full contents of ollybray99/easyaspai.com on GitHub.
+      #
+      # SETUP REQUIRED (one-time):
+      #   1. Go to github.com → log in as ollybray99
+      #   2. Settings → Developer settings → Personal access tokens → Fine-grained tokens
+      #   3. Create a token with:
+      #        Repository access:  ollybray99/easyaspai.com
+      #        Permissions:        Contents → Read and write
+      #   4. Copy the token value
+      #   5. In THIS repo (threeaimservices/ab4ent):
+      #        Settings → Secrets and variables → Actions → New repository secret
+      #        Name:   EASYASPAI_DEPLOY_TOKEN
+      #        Value:  (paste the token)
+      #   6. In ollybray99/easyaspai.com:
+      #        Settings → Pages → Source → Deploy from branch → main / (root)
+      - name: Push subfolder to ollybray99/easyaspai.com
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.EASYASPAI_DEPLOY_TOKEN }}
+        with:
+          source-directory: easyaspai.com
+          destination-github-username: ollybray99
+          destination-repository-name: easyaspai.com
+          target-branch: main
+          commit-message: "Deploy — ${{ github.sha }}"
+          user-email: hello@easyaspai.com
+          user-name: ollybray99

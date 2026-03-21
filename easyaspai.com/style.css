@@ -1,0 +1,223 @@
+/* ============================================
+   easyaspai.com — Stylesheet
+   Edit the :root variables to restyle the site
+   ============================================ */
+
+:root {
+    --colour-primary:   #6c3fc5;   /* purple — main brand colour */
+    --colour-accent:    #f5a623;   /* amber  — highlight / CTA   */
+    --colour-bg:        #f7f5ff;   /* light lavender background  */
+    --colour-text:      #2d2d2d;
+    --colour-light:     #ffffff;
+    --font-heading:     'Georgia', serif;
+    --font-body:        'Arial', sans-serif;
+    --max-width:        940px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--colour-text);
+    background: var(--colour-bg);
+    line-height: 1.75;
+    font-size: 17px;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--colour-primary); }
+a:hover { color: var(--colour-accent); }
+
+/* --- Header --- */
+header {
+    background: var(--colour-primary);
+    color: var(--colour-light);
+    padding: 0 1.5rem;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.2rem 0;
+}
+
+.site-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--colour-light);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.site-title span { color: var(--colour-accent); }
+
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+
+nav a {
+    color: var(--colour-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+nav a:hover { color: var(--colour-accent); }
+
+/* --- Hero --- */
+.hero {
+    background: linear-gradient(135deg, var(--colour-primary) 0%, #3a1a8a 100%);
+    color: var(--colour-light);
+    text-align: center;
+    padding: 6rem 1.5rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 999px;
+    padding: 0.3rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 620px;
+    margin: 0 auto 2.2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--colour-accent);
+    color: var(--colour-light);
+    padding: 0.9rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: opacity 0.2s;
+    margin: 0.3rem;
+}
+.btn:hover { opacity: 0.85; color: var(--colour-light); }
+
+.btn--outline {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+/* --- Sections --- */
+.section { padding: 4.5rem 1.5rem; }
+.section-inner { max-width: var(--max-width); margin: 0 auto; }
+.section--alt { background: var(--colour-light); }
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--colour-primary);
+    margin-bottom: 0.5rem;
+}
+
+.section h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--colour-primary);
+    margin-bottom: 1rem;
+}
+
+.section p { margin-bottom: 1rem; max-width: 720px; }
+
+/* --- Feature / benefit cards --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.card {
+    background: var(--colour-bg);
+    border: 1px solid #e0d8f5;
+    border-radius: 10px;
+    padding: 1.8rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    color: var(--colour-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+}
+
+/* --- How it works steps --- */
+.steps { margin-top: 2rem; counter-reset: step; }
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.step-number {
+    counter-increment: step;
+    width: 2.4rem;
+    height: 2.4rem;
+    min-width: 2.4rem;
+    background: var(--colour-primary);
+    color: var(--colour-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.step-content h3 {
+    font-family: var(--font-heading);
+    color: var(--colour-primary);
+    margin-bottom: 0.3rem;
+}
+
+/* --- Contact --- */
+.contact-info { margin-top: 1.5rem; }
+.contact-info p { margin-bottom: 0.5rem; }
+.contact-info a { font-weight: 600; }
+
+/* --- Footer --- */
+footer {
+    background: #2a1060;
+    color: #b8a8e0;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.9rem;
+}
+footer a { color: #b8a8e0; }
+
+@media (max-width: 600px) {
+    nav ul { gap: 1rem; }
+    .hero { padding: 3.5rem 1rem; }
+}
