@@ -1,26 +1,30 @@
 /* ========================================
    Mrs Andrea Burgess - ENT Consultant
-   Stylesheet
+   Stylesheet — styled to match RPC International brand
    ======================================== */
+
+/* Google Fonts — matching RPC's clean, professional sans-serif style */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap');
 
 /* CSS Custom Properties (Variables) */
 :root {
-    /* Colour Palette */
-    --color-primary: #1a5f7a;        /* Deep teal */
-    --color-primary-dark: #134a5f;
-    --color-primary-light: #2a7a9a;
-    --color-secondary: #c9a227;       /* Warm gold */
-    --color-secondary-light: #e0b93a;
+    /* Colour Palette — RPC International brand */
+    --color-primary: #1a2744;        /* RPC dark navy */
+    --color-primary-dark: #0e1a30;
+    --color-primary-light: #2a3d66;
+    --color-secondary: #e4001b;       /* RPC red accent */
+    --color-secondary-light: #ff1a35;
     --color-background: #ffffff;
-    --color-background-alt: #f8f9fa;
-    --color-text: #333333;
-    --color-text-light: #666666;
-    --color-text-muted: #888888;
-    --color-border: #e0e0e0;
+    --color-background-alt: #f4f6f9;
+    --color-text: #1a1a2e;
+    --color-text-light: #555566;
+    --color-text-muted: #888899;
+    --color-border: #dde2eb;
     --color-white: #ffffff;
 
-    /* Typography */
-    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    /* Typography — Barlow (RPC-style modern professional sans-serif) */
+    --font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-heading: 'Barlow Condensed', 'Barlow', sans-serif;
     --font-size-base: 16px;
     --font-size-sm: 0.875rem;
     --font-size-lg: 1.125rem;
@@ -84,6 +88,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 var(--spacing-md);
     line-height: 1.3;
     color: var(--color-primary-dark);
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 p {
@@ -163,6 +170,9 @@ img {
     background-color: var(--color-secondary);
     color: var(--color-white);
     border-color: var(--color-secondary);
+    font-family: var(--font-family-heading);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .btn-primary:hover {
@@ -181,8 +191,8 @@ img {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-sm);
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
@@ -200,12 +210,15 @@ img {
 .site-title {
     font-size: var(--font-size-xl);
     margin: 0;
-    color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 .site-subtitle {
     font-size: var(--font-size-sm);
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.65);
     margin: 0;
 }
 
@@ -221,7 +234,7 @@ img {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     position: relative;
     transition: background-color var(--transition-fast);
 }
@@ -233,7 +246,7 @@ img {
     left: 0;
     width: 24px;
     height: 2px;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     transition: transform var(--transition-fast);
 }
 
@@ -262,7 +275,7 @@ img {
     top: var(--header-height);
     left: 0;
     right: 0;
-    background-color: var(--color-white);
+    background-color: var(--color-primary-dark);
     box-shadow: var(--shadow-md);
     display: none;
 }
@@ -278,14 +291,23 @@ img {
 .nav-link {
     display: block;
     padding: var(--spacing-md) var(--spacing-lg);
-    color: var(--color-text);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
+    font-family: var(--font-family-heading);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
     transition: all var(--transition-fast);
 }
 
-.nav-link:hover {
-    background-color: var(--color-background-alt);
-    color: var(--color-primary);
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}
+
+.nav-link.active {
+    border-bottom: 2px solid var(--color-secondary);
 }
 
 /* ========================================
@@ -295,7 +317,7 @@ img {
 .hero {
     padding-top: calc(var(--header-height) + var(--spacing-3xl));
     padding-bottom: var(--spacing-3xl);
-    background: linear-gradient(135deg, rgba(26, 95, 122, 0.85) 0%, rgba(19, 74, 95, 0.9) 100%),
+    background: linear-gradient(135deg, rgba(14, 26, 48, 0.88) 0%, rgba(26, 39, 68, 0.92) 100%),
                 url('../images/hero-consultation.jpg');
     background-size: cover;
     background-position: center;
@@ -826,7 +848,7 @@ img {
     }
 
     .nav-link:hover {
-        background-color: var(--color-background-alt);
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .hero-headline {
@@ -1238,7 +1260,7 @@ button:focus {
 /* Page Hero (Internal Pages) */
 .page-hero {
     padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-xl);
-    background: linear-gradient(135deg, rgba(26, 95, 122, 0.85) 0%, rgba(19, 74, 95, 0.9) 100%),
+    background: linear-gradient(135deg, rgba(14, 26, 48, 0.88) 0%, rgba(26, 39, 68, 0.92) 100%),
                 url('../images/hero-consultation.jpg');
     background-size: cover;
     background-position: center;
