@@ -1,0 +1,55 @@
+name: Sync easyaspai Environment
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:        # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Sync from ollybray99/easyaspai.com
+    runs-on: ubuntu-latest
+    environment:
+      name: easyaspai
+      url: https://ollybray99.github.io/easyaspai.com
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch easyaspai.com source
+        run: |
+          git clone --depth 1 https://github.com/ollybray99/easyaspai.com.git /tmp/easyaspai-source
+
+      - name: Sync content to easyaspai branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Create or switch to the easyaspai branch
+          git fetch origin easyaspai 2>/dev/null || true
+          git checkout easyaspai 2>/dev/null || git checkout --orphan easyaspai
+
+          # Remove existing tracked files (keep .github)
+          git rm -rf --cached . 2>/dev/null || true
+          find . -maxdepth 1 -not -name '.git' -not -name '.github' -not -name '.' | xargs rm -rf 2>/dev/null || true
+
+          # Copy synced files from source repo
+          cp -r /tmp/easyaspai-source/. .
+          rm -rf .git  # remove nested .git from clone copy (safety)
+
+          # Stage and commit if there are changes
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to sync."
+          else
+            COMMIT_SHA=$(git -C /tmp/easyaspai-source rev-parse --short HEAD)
+            git commit -m "sync: update from ollybray99/easyaspai.com@${COMMIT_SHA}"
+            git push origin easyaspai
+            echo "Synced successfully."
+          fi
