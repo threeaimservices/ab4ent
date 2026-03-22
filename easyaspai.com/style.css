@@ -1,16 +1,19 @@
 /* ============================================
    easyaspai.com — Stylesheet
+   Styled to match RPC International brand identity
    Edit the :root variables to restyle the site
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap');
+
 :root {
-    --colour-primary:   #6c3fc5;   /* purple — main brand colour */
-    --colour-accent:    #f5a623;   /* amber  — highlight / CTA   */
-    --colour-bg:        #f7f5ff;   /* light lavender background  */
-    --colour-text:      #2d2d2d;
+    --colour-primary:   #1a2744;   /* RPC dark navy */
+    --colour-accent:    #e4001b;   /* RPC red */
+    --colour-bg:        #f4f6f9;   /* light grey background */
+    --colour-text:      #1a1a2e;
     --colour-light:     #ffffff;
-    --font-heading:     'Georgia', serif;
-    --font-body:        'Arial', sans-serif;
+    --font-heading:     'Barlow Condensed', 'Barlow', sans-serif;
+    --font-body:        'Barlow', Arial, sans-serif;
     --max-width:        940px;
 }
 
@@ -60,16 +63,19 @@ header {
 nav ul { list-style: none; display: flex; gap: 1.5rem; }
 
 nav a {
-    color: var(--colour-light);
+    color: rgba(255,255,255,0.85);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-heading);
 }
-nav a:hover { color: var(--colour-accent); }
+nav a:hover { color: var(--colour-light); }
 
 /* --- Hero --- */
 .hero {
-    background: linear-gradient(135deg, var(--colour-primary) 0%, #3a1a8a 100%);
+    background: linear-gradient(135deg, var(--colour-primary) 0%, #0e1a30 100%);
     color: var(--colour-light);
     text-align: center;
     padding: 6rem 1.5rem;
@@ -154,7 +160,7 @@ nav a:hover { color: var(--colour-accent); }
 
 .card {
     background: var(--colour-bg);
-    border: 1px solid #e0d8f5;
+    border: 1px solid #dde2eb;
     border-radius: 10px;
     padding: 1.8rem;
 }
@@ -209,13 +215,13 @@ nav a:hover { color: var(--colour-accent); }
 
 /* --- Footer --- */
 footer {
-    background: #2a1060;
-    color: #b8a8e0;
+    background: #0e1a30;
+    color: rgba(255,255,255,0.6);
     text-align: center;
     padding: 2rem 1.5rem;
     font-size: 0.9rem;
 }
-footer a { color: #b8a8e0; }
+footer a { color: rgba(255,255,255,0.6); }
 
 @media (max-width: 600px) {
     nav ul { gap: 1rem; }
