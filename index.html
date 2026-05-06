@@ -35,6 +35,7 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/styles.css">
+    <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -47,9 +48,6 @@
                         <span class="site-subtitle">Mrs Andrea Burgess, Hampshire, UK</span>
                     </a>
                 </div>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                    <span class="hamburger"></span>
-                </button>
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
                         <li><a href="adults.html" class="nav-link">Adults</a></li>
@@ -58,6 +56,15 @@
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+                        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </button>
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -242,7 +249,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: var(--spacing-xl); padding: var(--spacing-lg); background-color: #fef3c7; border-radius: var(--radius-lg); border-left: 4px solid #f59e0b;">
+            <div class="contact-insurance-note" style="text-align: center; margin-top: var(--spacing-xl); padding: var(--spacing-lg); background-color: #fef3c7; border-radius: var(--radius-lg); border-left: 4px solid #f59e0b;">
                 <p style="margin-bottom: var(--spacing-sm); color: #78350f; font-weight: 600;">Both insured and self-pay patients are welcome. All major UK health insurers accepted.</p>
                 <p style="margin-bottom: 0; color: #78350f;"><small>For NHS referrals, please speak to your GP.</small></p>
             </div>
