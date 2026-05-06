@@ -1861,3 +1861,231 @@ body.children-page .page-hero p {
         text-overflow: ellipsis;
     }
 }
+
+/* ========================================
+   Dark Mode
+   ======================================== */
+
+[data-theme="dark"] {
+    --color-primary: #5bb8d4;
+    --color-primary-dark: #4aa5c0;
+    --color-primary-light: #72c8e2;
+    --color-secondary: #d4a832;
+    --color-secondary-light: #e5bc45;
+    --color-background: #0d1b22;
+    --color-background-alt: #132230;
+    --color-text: #dde8ec;
+    --color-text-light: #8eb8c8;
+    --color-text-muted: #5e8d9e;
+    --color-border: #1e3a4a;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Elements using --color-white as surface background */
+[data-theme="dark"] .header,
+[data-theme="dark"] .nav {
+    background-color: #091520;
+}
+
+[data-theme="dark"] .subspecialty-card,
+[data-theme="dark"] .condition-category,
+[data-theme="dark"] .patient-card,
+[data-theme="dark"] .advice-card,
+[data-theme="dark"] .download-category,
+[data-theme="dark"] .achievement-note {
+    background-color: var(--color-background-alt);
+}
+
+[data-theme="dark"] .page-nav-list a {
+    background-color: var(--color-background-alt);
+    color: var(--color-text);
+}
+
+/* Sections using --color-primary as background */
+[data-theme="dark"] .contact {
+    background-color: #0a2030;
+}
+
+[data-theme="dark"] .footer {
+    background-color: #060f16;
+}
+
+/* Hardcoded alert card backgrounds */
+[data-theme="dark"] .urgent-emergency {
+    background-color: #2a0e0e;
+    border-left-color: #ef4444;
+}
+
+[data-theme="dark"] .urgent-emergency h3 {
+    color: #f87171;
+}
+
+[data-theme="dark"] .urgent-emergency li::before {
+    background-color: #f87171;
+}
+
+[data-theme="dark"] .urgent-soon {
+    background-color: #2a200a;
+    border-left-color: #d97706;
+}
+
+[data-theme="dark"] .urgent-soon h3 {
+    color: #fbbf24;
+}
+
+[data-theme="dark"] .urgent-soon li::before {
+    background-color: #fbbf24;
+}
+
+/* Warning box */
+[data-theme="dark"] .warning-box {
+    background-color: #2a0e0e;
+    border-color: #7f1d1d;
+    border-left-color: #ef4444;
+}
+
+[data-theme="dark"] .warning-box strong {
+    color: #f87171;
+}
+
+/* Inline-styled contact appointment cards on index.html */
+[data-theme="dark"] #contact .urgent-card {
+    background-color: var(--color-background-alt) !important;
+    border-left-color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] #contact .urgent-card h3 {
+    color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] #contact .urgent-card p {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] #contact .urgent-card a {
+    color: var(--color-primary-light) !important;
+}
+
+[data-theme="dark"] #contact .urgent-card p:last-child {
+    background-color: rgba(91, 184, 212, 0.08) !important;
+}
+
+/* Inline-styled insurance note on index.html */
+[data-theme="dark"] .contact-insurance-note {
+    background-color: #1a2610 !important;
+    border-left-color: var(--color-secondary) !important;
+}
+
+[data-theme="dark"] .contact-insurance-note p {
+    color: var(--color-text) !important;
+}
+
+/* Children's page section backgrounds */
+[data-theme="dark"] body.children-page .section:nth-child(odd) {
+    background: linear-gradient(180deg, #0d1f2d 0%, #0a1822 100%);
+}
+
+[data-theme="dark"] body.children-page .section:nth-child(even) {
+    background: linear-gradient(180deg, #12190e 0%, #0e1509 100%);
+}
+
+[data-theme="dark"] body.children-page .page-nav {
+    background: linear-gradient(90deg, #0d2a1e 0%, #1c200e 50%, #1a100d 100%);
+}
+
+[data-theme="dark"] body.children-page .page-nav-list a {
+    background-color: var(--color-background-alt);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+[data-theme="dark"] body.children-page .intro-box {
+    background: linear-gradient(135deg, #1a1a08 0%, #1e1905 100%);
+    border-left-color: var(--color-secondary);
+}
+
+[data-theme="dark"] body.children-page .intro-box h2 {
+    color: var(--color-secondary);
+}
+
+[data-theme="dark"] body.children-page .advice-card {
+    background-color: var(--color-background-alt);
+}
+
+[data-theme="dark"] body.children-page .download-btn {
+    background: linear-gradient(135deg, #7a1a52 0%, #7a4208 100%);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] body.children-page .download-btn:hover {
+    background: linear-gradient(135deg, #8e1f60 0%, #8e4e0e 100%);
+}
+
+[data-theme="dark"] body.children-page .download-category {
+    background-color: var(--color-background-alt);
+}
+
+[data-theme="dark"] body.children-page .warning-box {
+    background: linear-gradient(135deg, #2a0e0e 0%, #200a0a 100%);
+}
+
+[data-theme="dark"] body.children-page .warning-box strong {
+    color: #f87171;
+}
+
+/* ========================================
+   Theme Toggle Button & Header Actions
+   ======================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    flex-shrink: 0;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    padding: 6px;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    background-color: var(--color-background-alt);
+    color: var(--color-primary-light);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+.theme-toggle .icon-sun {
+    display: none;
+}
+
+.theme-toggle .icon-moon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle {
+    color: var(--color-secondary);
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+    display: none;
+}

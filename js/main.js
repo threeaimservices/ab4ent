@@ -6,6 +6,30 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const header = document.querySelector('.header');
     const currentYearEl = document.getElementById('current-year');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Dark mode toggle
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (themeToggle) {
+            const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-label', label);
+            themeToggle.setAttribute('title', label);
+        }
+    }
+
+    if (themeToggle) {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const label = current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+        themeToggle.setAttribute('aria-label', label);
+        themeToggle.setAttribute('title', label);
+
+        themeToggle.addEventListener('click', function() {
+            const active = document.documentElement.getAttribute('data-theme') || 'light';
+            applyTheme(active === 'dark' ? 'light' : 'dark');
+        });
+    }
 
     if (currentYearEl) {
         currentYearEl.textContent = new Date().getFullYear();
